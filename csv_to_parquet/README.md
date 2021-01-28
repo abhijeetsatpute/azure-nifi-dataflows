@@ -10,9 +10,9 @@ Processors that are being used in the pipeline:
 
 # <b>Resources</b>
 
-- [Avro schema validator](https://json-schema-validator.herokuapp.com/avro.jsp)
-- [Parquet Viewer](http://parquet-viewer-online.com/)
-- [Expression Language replace()](https://nifi.apache.org/docs/nifi-docs/html/expression-language-guide.html#replace)
+- [Avro schema validator](https://json-schema-validator.herokuapp.com/avro.jsp) : Validate your avro schema.
+- [Parquet Viewer](http://parquet-viewer-online.com/) : Check the data for validity
+- [Expression Language replace()](https://nifi.apache.org/docs/nifi-docs/html/expression-language-guide.html#replace) : Used for replacing file extension.
 - [Regex](https://regex101.com/)
 
 > **Validate** avro schema : *DemoSchema* Controller Service properety *courses* a/c to the input file.
