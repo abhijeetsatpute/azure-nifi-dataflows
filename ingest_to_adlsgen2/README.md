@@ -3,7 +3,7 @@ A dataflow to ingest input file data to [Azure Data Lake Storagegen2](https://do
 <hr/>
 
 Processors that are being used in the pipeline:
-- [GetFile](https://nifi.apache.org/docs/nifi-docs/components/org.apache.nifi/nifi-standard-nar/1.5.0/org.apache.nifi.processors.standard.GetFile/index.html) - Fetches csv files as a source.
+- [GetFile](https://nifi.apache.org/docs/nifi-docs/components/org.apache.nifi/nifi-standard-nar/1.5.0/org.apache.nifi.processors.standard.GetFile/index.html) - Creates FlowFiles from files in a directory.
 - [PutAzureDataLakeStorage](https://nifi.apache.org/docs/nifi-docs/components/org.apache.nifi/nifi-azure-nar/1.12.1/org.apache.nifi.processors.azure.storage.PutAzureDataLakeStorage/index.html) - Puts content into an Azure Data Lake Storage Gen 2
 
 # <b>Resources</b>
