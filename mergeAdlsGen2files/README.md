@@ -1,5 +1,5 @@
 # Dataflow into ADLS
-A dataflow to merge all the files in ADLSgen2 storage into one file and ingest back to [Azure Data Lake Storagegen2](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction).
+A dataflow to merge all the files from ADLSgen2 storage into one file and ingest back to [Azure Data Lake Storagegen2](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction).
 <hr/>
 
 
