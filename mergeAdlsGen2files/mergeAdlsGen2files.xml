@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <template encoding-version="1.3">
-    <description></description>
+    <description>A dataflow to merge all the files in ADLSgen2 storage into one file and ingest back to Azure Data Lake Storagegen2.</description>
     <groupId>3eb9b5eb-0177-1000-41fa-e36a41d06564</groupId>
     <name>mergeAdlsGen2files</name>
     <snippet>
@@ -212,7 +212,7 @@
                     </position>
                     <height>88.0</height>
                     <label>Configure the ADLS credentials,
-file system name 
+file system name
 &amp; folder name</label>
                     <style>
                         <entry>
