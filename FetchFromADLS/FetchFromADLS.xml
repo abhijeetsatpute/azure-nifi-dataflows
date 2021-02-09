@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template encoding-version="1.3">
+    <description>Fetch files from ADLS.</description>
+    <groupId>3eb9b5eb-0177-1000-41fa-e36a41d06564</groupId>
+    <name>FetchFromADLS</name>
+    <snippet>
+        <controllerServices>
+            <id>5cf3cc3e-1b45-306e-0000-000000000000</id>
+            <parentGroupId>78680642-de56-3cd8-0000-000000000000</parentGroupId>
+            <bundle>
+                <artifact>nifi-azure-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.12.1</version>
+            </bundle>
+            <comments></comments>
+            <descriptors>
+                <entry>
+                    <key>storage-account-name</key>
+                    <value>
+                        <name>storage-account-name</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>storage-endpoint-suffix</key>
+                    <value>
+                        <name>storage-endpoint-suffix</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>storage-account-key</key>
+                    <value>
+                        <name>storage-account-key</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>storage-sas-token</key>
+                    <value>
+                        <name>storage-sas-token</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>storage-use-managed-identity</key>
+                    <value>
+                        <name>storage-use-managed-identity</name>
+                    </value>
+                </entry>
+            </descriptors>
+            <name>ADLSCredentialsControllerService</name>
+            <persistsState>false</persistsState>
+            <properties>
+                <entry>
+                    <key>storage-account-name</key>
+                </entry>
+                <entry>
+                    <key>storage-endpoint-suffix</key>
+                    <value>dfs.core.windows.net</value>
+                </entry>
+                <entry>
+                    <key>storage-account-key</key>
+                </entry>
+                <entry>
+                    <key>storage-sas-token</key>
+                </entry>
+                <entry>
+                    <key>storage-use-managed-identity</key>
+                    <value>false</value>
+                </entry>
+            </properties>
+            <state>ENABLED</state>
+            <type>org.apache.nifi.services.azure.storage.ADLSCredentialsControllerService</type>
+        </controllerServices>
+        <processGroups>
+            <id>05f5c60b-2169-3db4-0000-000000000000</id>
+            <parentGroupId>78680642-de56-3cd8-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.0</x>
+                <y>0.0</y>
+            </position>
+            <comments></comments>
+            <contents>
+                <connections>
+                    <id>bb404735-e845-32b7-0000-000000000000</id>
+                    <parentGroupId>05f5c60b-2169-3db4-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>05f5c60b-2169-3db4-0000-000000000000</groupId>
+                        <id>e264b459-bf97-37b1-0000-000000000000</id>
+                        <type>OUTPUT_PORT</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>05f5c60b-2169-3db4-0000-000000000000</groupId>
+                        <id>e78e2814-f574-335a-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>ee38badd-546e-379f-0000-000000000000</id>
+                    <parentGroupId>05f5c60b-2169-3db4-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>05f5c60b-2169-3db4-0000-000000000000</groupId>
+                        <id>e78e2814-f574-335a-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>05f5c60b-2169-3db4-0000-000000000000</groupId>
+                        <id>4c1686eb-bf23-3af4-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <labels>
+                    <id>4a48e032-8883-3154-0000-000000000000</id>
+                    <parentGroupId>05f5c60b-2169-3db4-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>160.0</x>
+                        <y>-200.0</y>
+                    </position>
+                    <height>64.0</height>
+                    <label>Fetches all the files from adls dir</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>16px</value>
+                        </entry>
+                    </style>
+                    <width>280.0</width>
+                </labels>
+                <labels>
+                    <id>cd64a829-e714-30c8-0000-000000000000</id>
+                    <parentGroupId>05f5c60b-2169-3db4-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>400.0</x>
+                        <y>104.0</y>
+                    </position>
+                    <height>48.0</height>
+                    <label>Lists all the files from adls</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>16px</value>
+                        </entry>
+                    </style>
+                    <width>208.0</width>
+                </labels>
+                <outputPorts>
+                    <id>e264b459-bf97-37b1-0000-000000000000</id>
+                    <parentGroupId>05f5c60b-2169-3db4-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>848.0</x>
+                        <y>-128.0</y>
+                    </position>
+                    <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                    <name>ADLSFetchedFiles</name>
+                    <state>STOPPED</state>
+                    <type>OUTPUT_PORT</type>
+                    <validationErrors>'Port 'ADLSFetchedFiles'' is invalid because Port has no outgoing connections</validationErrors>
+                </outputPorts>
+                <processors>
+                    <id>4c1686eb-bf23-3af4-0000-000000000000</id>
+                    <parentGroupId>05f5c60b-2169-3db4-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>200.0</x>
+                        <y>136.0</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-azure-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.12.1</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>adls-credentials-service</key>
+<value>
+    <identifiesControllerService>org.apache.nifi.services.azure.storage.ADLSCredentialsService</identifiesControllerService>
+    <name>adls-credentials-service</name>
+</value>
+                            </entry>
+                            <entry>
+<key>filesystem-name</key>
+<value>
+    <name>filesystem-name</name>
+</value>
+                            </entry>
+                            <entry>
+<key>directory-name</key>
+<value>
+    <name>directory-name</name>
+</value>
+                            </entry>
+                            <entry>
+<key>recurse-subdirectories</key>
+<value>
+    <name>recurse-subdirectories</name>
+</value>
+                            </entry>
+                            <entry>
+<key>file-filter</key>
+<value>
+    <name>file-filter</name>
+</value>
+                            </entry>
+                            <entry>
+<key>path-filter</key>
+<value>
+    <name>path-filter</name>
+</value>
+                            </entry>
+                            <entry>
+<key>record-writer</key>
+<value>
+    <identifiesControllerService>org.apache.nifi.serialization.RecordSetWriterFactory</identifiesControllerService>
+    <name>record-writer</name>
+</value>
+                            </entry>
+                            <entry>
+<key>listing-strategy</key>
+<value>
+    <name>listing-strategy</name>
+</value>
+                            </entry>
+                            <entry>
+<key>et-state-cache</key>
+<value>
+    <identifiesControllerService>org.apache.nifi.distributed.cache.client.DistributedMapCacheClient</identifiesControllerService>
+    <name>et-state-cache</name>
+</value>
+                            </entry>
+                            <entry>
+<key>et-time-window</key>
+<value>
+    <name>et-time-window</name>
+</value>
+                            </entry>
+                            <entry>
+<key>et-initial-listing-target</key>
+<value>
+    <name>et-initial-listing-target</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>PRIMARY</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>adls-credentials-service</key>
+<value>5cf3cc3e-1b45-306e-0000-000000000000</value>
+                            </entry>
+                            <entry>
+<key>filesystem-name</key>
+<value>files</value>
+                            </entry>
+                            <entry>
+<key>directory-name</key>
+<value>csvs</value>
+                            </entry>
+                            <entry>
+<key>recurse-subdirectories</key>
+<value>true</value>
+                            </entry>
+                            <entry>
+<key>file-filter</key>
+                            </entry>
+                            <entry>
+<key>path-filter</key>
+                            </entry>
+                            <entry>
+<key>record-writer</key>
+                            </entry>
+                            <entry>
+<key>listing-strategy</key>
+<value>timestamps</value>
+                            </entry>
+                            <entry>
+<key>et-state-cache</key>
+                            </entry>
+                            <entry>
+<key>et-time-window</key>
+<value>3 hours</value>
+                            </entry>
+                            <entry>
+<key>et-initial-listing-target</key>
+<value>all</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>true</executionNodeRestricted>
+                    <name>ListAzureDataLakeStorage</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.azure.storage.ListAzureDataLakeStorage</type>
+                </processors>
+                <processors>
+                    <id>e78e2814-f574-335a-0000-000000000000</id>
+                    <parentGroupId>05f5c60b-2169-3db4-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>200.0</x>
+                        <y>-168.0</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-azure-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.12.1</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>adls-credentials-service</key>
+<value>
+    <identifiesControllerService>org.apache.nifi.services.azure.storage.ADLSCredentialsService</identifiesControllerService>
+    <name>adls-credentials-service</name>
+</value>
+                            </entry>
+                            <entry>
+<key>filesystem-name</key>
+<value>
+    <name>filesystem-name</name>
+</value>
+                            </entry>
+                            <entry>
+<key>directory-name</key>
+<value>
+    <name>directory-name</name>
+</value>
+                            </entry>
+                            <entry>
+<key>file-name</key>
+<value>
+    <name>file-name</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>adls-credentials-service</key>
+<value>5cf3cc3e-1b45-306e-0000-000000000000</value>
+                            </entry>
+                            <entry>
+<key>filesystem-name</key>
+<value>files</value>
+                            </entry>
+                            <entry>
+<key>directory-name</key>
+<value>csvs</value>
+                            </entry>
+                            <entry>
+<key>file-name</key>
+<value>${azure.filename}</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>FetchAzureDataLakeStorage</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.azure.storage.FetchAzureDataLakeStorage</type>
+                </processors>
+            </contents>
+            <flowfileConcurrency>UNBOUNDED</flowfileConcurrency>
+            <flowfileOutboundPolicy>STREAM_WHEN_AVAILABLE</flowfileOutboundPolicy>
+            <name>FetchFromADLS</name>
+            <variables/>
+        </processGroups>
+    </snippet>
+    <timestamp>02/09/2021 07:27:27 IST</timestamp>
+</template>
